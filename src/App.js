@@ -11,7 +11,7 @@ function App() {
 <body>
   <form name="dentaku">
     <table>
-      <!-- 液晶画面部分 -->
+      <!-- 液晶画面部分test -->
       <tr>
         <tr>
         <td colspan="4">

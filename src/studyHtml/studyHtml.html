@@ -1,21 +1,61 @@
+<!-- 
+  参考文献
+https://makefri.jp/web/6286/
+-->
+
+<!-- 
+
+<a href="http://kairo3.net/">Kairo3のページ</a>
+1)要素名(開始タグ)⇒<a 
+2)属性 ⇒href
+3)属性値 ⇒"http://kairo3.net/
+4)表示される内容 ⇒Kairo3のページ
+5)終了タグ ⇒</a>
+ -->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------>
 <!-- DOCTYPE宣言
 先頭に記載し、html5以降は<!DOCTYPE html>と記載
 -->
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
 
+<!-- htmlタグ
+ドキュメントがHTML文書であることを示すタグ
+DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タグを記述
+-->
+<html lang="ja">
+
+<!-- headタグ
+  ブラウザに向けた情報を記述するタグ
+  titleタグやmetaタグ、linkタグなどを使用する。
+  検索エンジンに向けた情報なので、Webページの画面上には表示されないが、SEOの観点から、headタグを適切に記述することは大切
+ -->
+<head>
+
+<!--title属性
+  Webページのタイトルを表示するためのタグ
+-->
+  <title>電卓作成中(HTML)</title>
+
+<!--meta属性
+  文書のメタ情報を提供するために使用され空要素であり、終了タグが不要(要素は属性に情報を含み、自己完結型であるため、終了タグを持たない)
+  ※終了タグを持たない属性をvoid要素ともいう
+-->
+  <meta charset="utf-8">
 </head>
 
+<!-- bodyタグ
+  Webページの訪問者に直接見える部分
+ -->
 <body>
+  <button onclick="test">test </button>
   <form name="dentaku">
     <table>
       <!-- 液晶画面部分 -->
       <tr>
-        <tr>
+      <tr>
         <td colspan="4">
-          <input type="text" class="display" name="display" value="" disabled>
+          <input type="text" class="display" name="display" value="電卓作成中">
         </td>
       </tr>
 
@@ -26,7 +66,7 @@
         <td><input type="button" value="9" onclick="get_calc(this)"></td>
         <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>
       </tr>
-        
+
       <!-- 上から2段目（4~6＋×） -->
       <tr>
         <td><input type="button" value="4" onclick="get_calc(this)"></td>
@@ -54,4 +94,5 @@
     </table>
   </form>
 </body>
+
 </html>

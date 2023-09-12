@@ -2,59 +2,34 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  // 各ボタンについて
+  let oneButton = 1;
+  let twoButton = 2;
+  let threeButton = 3;
+  let fourButton = 4;
+  let fiveButton = 5;
+  let sixButton = 6;
+  let sevenButton = 7;
+  let eightButton = 8;
+  let nineButton = 9;
+
+  let plusButton = null
+  let equalButton = null
+
+  // function tashizanLogic(){
+  //   // 何かの式を入れる?
+  //   "button1"+"button2"
+  // }
+
   return (
-<head>
-  <meta charset="utf-8">
-
-</head>
-
-<body>
-  <form name="dentaku">
-    <table>
-      <!-- 液晶画面部分 -->
-      <tr>
-        <tr>
-        <td colspan="4">
-          <input type="text" class="display" name="display" value="" disabled>
-        </td>
-      </tr>
-
-      <!-- 上から1段目（7~9＋÷） -->
-      <tr>
-        <td><input type="button" value="7" onclick="get_calc(this)"></td>
-        <td><input type="button" value="8" onclick="get_calc(this)"></td>
-        <td><input type="button" value="9" onclick="get_calc(this)"></td>
-        <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>
-      </tr>
-        
-      <!-- 上から2段目（4~6＋×） -->
-      <tr>
-        <td><input type="button" value="4" onclick="get_calc(this)"></td>
-        <td><input type="button" value="5" onclick="get_calc(this)"></td>
-        <td><input type="button" value="6" onclick="get_calc(this)"></td>
-        <td><input type="button" value="×" class="operator" name="multi_btn" onclick="get_calc(this)"></td>
-      </tr>
-
-      <!-- 上から3段目（1~3＋-） -->
-      <tr>
-        <td><input type="button" value="1" onclick="get_calc(this)"></td>
-        <td><input type="button" value="2" onclick="get_calc(this)"></td>
-        <td><input type="button" value="3" onclick="get_calc(this)"></td>
-        <td><input type="button" value="-" class="operator" onclick="get_calc(this)"></td>
-      </tr>
-
-      <!-- 上から4段目（0/C/=/+) -->
-      <tr>
-        <td><input type="button" value="0" onclick="get_calc(this)"></td>
-        <td><input type="button" value="C" onclick="get_calc(this)"></td>
-        <td><input type="button" value="=" class="equal" onclick="get_calc(this)"></td>
-        <td><input type="button" value="+" class="operator" onclick="get_calc(this)"></td>
-      </tr>
-
-    </table>
-  </form>
-</body>
-</html>
+    // ★ReactのJSXについて、この部分を空白にすることは許されない
+    // React
+    // <>
+    //  <input />
+    // "hellow"
+    // </>
+null
   );
 }
 

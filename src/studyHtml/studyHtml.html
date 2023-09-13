@@ -48,20 +48,33 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
   Webページの訪問者に直接見える部分
  -->
 <body>
+
+  
   <button onclick="test">test </button>
+
+  <!-- form
+  入力・送信フォームを作成する際に使用する要素
+
+   -->
+   <form method="POST" action="sample.cgi">
+    <p>お名前：<input type="text" name="NAME"></p>
+    <p>メールアドレス：<input type="text" name="email"></p>
+    <p><input type="reset" value="送信する"></p>
+    <p><input type="reset" value="取消する"></p>
+  </form>
   <form name="dentaku">
     <table>
       <!-- 液晶画面部分 -->
       <tr>
       <tr>
-        <td colspan="4">
+        <td colspan="100">
           <input type="text" class="display" name="display" value="電卓作成中">
         </td>
       </tr>
 
       <!-- 上から1段目（7~9＋÷） -->
       <tr>
-        <td><input type="button" value="7" onclick="get_calc(this)"></td>
+        <td><input  value="7" onclick="get_calc(this)"></td>
         <td><input type="button" value="8" onclick="get_calc(this)"></td>
         <td><input type="button" value="9" onclick="get_calc(this)"></td>
         <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>

@@ -54,14 +54,29 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
 
   <!-- form
   入力・送信フォームを作成する際に使用する要素
-
+    ・method：サーバーにデータを送る形式をGET または POST で指定
+    ・action：実行（submit）された時の動作を指定
+    ・name：フォームの名前を指定
+    ※javascript等で制御しない限り、formのアクションを省略してinputタグのsubmitを定義したりはできない
    -->
-   <form method="POST" action="sample.cgi">
+   <!-- input
+   <form>タグで作成したフォームの中でテキスト入力欄やボタンなどの部品を作成する要素であり、部品はtype属性の値に指定することが可能
+    ※typeで指定できるもの
+    ・text：1行テキストボックスを作る
+    ・submit：フォームの実行ボタンを作る
+    ・reset：フォームに入力した内容をリセットするボタンを作る
+    ・button：汎用的なボタンを作る
+    -->
+   <form method="POST" action="https://larc-en-ciel.com/index.php">
     <p>お名前：<input type="text" name="NAME"></p>
     <p>メールアドレス：<input type="text" name="email"></p>
-    <p><input type="reset" value="送信する"></p>
+    <p><input type="submit" value="送信する"></p>
     <p><input type="reset" value="取消する"></p>
   </form>
+
+
+
+
   <form name="dentaku">
     <table>
       <!-- 液晶画面部分 -->

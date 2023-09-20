@@ -1,0 +1,57 @@
+/*参考文献
+ https://webliker.info/css-selector-cheat-sheet/ 
+ */
+
+
+/* 
+id属性
+htmlで使用する際は一意にしなければいけない
+→idtestは一回しか使えない
+Q:呼び出すHTMLが異なれば問題無いのか？
+*/
+#idtest {
+  width: 150px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #26451f;
+}
+
+/* id名 */
+#idtest2 {
+  width: 150px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #c6a22a;
+}
+
+
+/* 
+class属性
+class指定したもののみ影響を受ける
+*/
+.operator {
+  width: 100px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+/* タグ属性
+対象のタグの全てが以下の影響を受ける
+*/
+button {
+  width: 100px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #0dbaef;
+}
+
+/* タグ属性、クラス指定
+対象のタグのクラス属性のみ影響を受ける
+*/
+input.textbox {
+  width: 3%;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #451f22;
+}

@@ -1,6 +1,8 @@
 <!-- 
   参考文献
 https://makefri.jp/web/6286/
+htmlは開始タグや終了タグが欠けて居ても表示される
+※★ReactでエラーとなるのはReact側で制御されている可能性がある⇒要確認
 -->
 
 <!-- 
@@ -36,18 +38,18 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
   Webページのタイトルを表示するためのタグ
 -->
   <title>電卓作成中(HTML)</title>
-
+  <link rel="stylesheet" href="../App.css">
 <!--meta属性
   文書のメタ情報を提供するために使用され空要素であり、終了タグが不要(要素は属性に情報を含み、自己完結型であるため、終了タグを持たない)
   ※終了タグを持たない属性をvoid要素ともいう
 -->
   <meta charset="utf-8">
-</head>
+<!-- </head> -->
 
 <!-- bodyタグ
   Webページの訪問者に直接見える部分
  -->
-<body>
+<!-- <body> -->
 
   
   <button onclick="test">test </button>
@@ -59,6 +61,7 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
     ・name：フォームの名前を指定
     ※javascript等で制御しない限り、formのアクションを省略してinputタグのsubmitを定義したりはできない
    -->
+
    <!-- input
    <form>タグで作成したフォームの中でテキスト入力欄やボタンなどの部品を作成する要素であり、部品はtype属性の値に指定することが可能
     ※typeで指定できるもの
@@ -67,15 +70,13 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
     ・reset：フォームに入力した内容をリセットするボタンを作る
     ・button：汎用的なボタンを作る
     -->
+
    <form method="POST" action="https://larc-en-ciel.com/index.php">
     <p>お名前：<input type="text" name="NAME"></p>
     <p>メールアドレス：<input type="text" name="email"></p>
     <p><input type="submit" value="送信する"></p>
     <p><input type="reset" value="取消する"></p>
   </form>
-
-
-
 
   <form name="dentaku">
     <table>
@@ -89,10 +90,10 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
 
       <!-- 上から1段目（7~9＋÷） -->
       <tr>
-        <td><input  value="7" onclick="get_calc(this)"></td>
-        <td><input type="button" value="8" onclick="get_calc(this)"></td>
-        <td><input type="button" value="9" onclick="get_calc(this)"></td>
-        <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>
+        <td><input class="textbox" type="button" value="7" onclick="get_calc(this)"></td>
+        <td><input class="textbox" type="button" value="8" onclick="get_calc(this)"></td>
+        <td><input id="idtest" type="button" value="9" onclick="get_calc(this)"></td>
+        <td><input  type="button" value="÷" id="idtest2" name="div_btn" onclick="get_calc(this)"></td>
       </tr>
 
       <!-- 上から2段目（4~6＋×） -->

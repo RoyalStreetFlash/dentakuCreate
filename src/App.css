@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+/*参考文献
+ https://webliker.info/css-selector-cheat-sheet/ 
+ */
+
+
+input.textbox {
+  width: 3%;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #451f22;
+}
+
+/* idは一意にで使わなければいけない。
+だが、htmlではエラーにならない
+*/
+#idtest {
+  width: 150px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #26451f;
+}
+
+/* id名 */
+#idtest2 {
+  width: 150px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #c6a22a;
+}
+
+
+.operator {
+  /* width: 100px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  border: 2px solid #ccc; */
+}
+

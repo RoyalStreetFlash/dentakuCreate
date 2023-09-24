@@ -29,15 +29,22 @@ Q:呼び出すHTMLが異なれば問題無いのか？
 class属性
 class指定したもののみ影響を受ける
 */
-.operator {
-  width: 100px;
+.buttoncss {
+  width: 50px;
+  height: 40  px;
   padding: 3px 7px;
   border-radius: 5px;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
+}
+
+.display {
+  width: 200px;
+  height: 50px;
 }
 
 /* タグ属性
 対象のタグの全てが以下の影響を受ける
+以下の例だと  <button ～>のhtmlは影響を受ける
 */
 button {
   width: 100px;

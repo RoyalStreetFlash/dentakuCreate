@@ -3,6 +3,8 @@
 https://makefri.jp/web/6286/
 htmlは開始タグや終了タグが欠けて居ても表示される
 ※★ReactでエラーとなるのはReact側で制御されている可能性がある⇒要確認
+10/01 TortoiseGit test
+
 -->
 
 <!-- 
@@ -45,13 +47,14 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
   基本的にheadタグ内で記載する
   以下が無ければcssの影響は受けない
 -->
-  <link rel="stylesheet" href="../dentaku.css">
+  <link rel="stylesheet" href="./dentaku.css">
 <!--meta属性
   文書のメタ情報を提供するために使用され空要素であり、終了タグが不要(要素は属性に情報を含み、自己完結型であるため、終了タグを持たない)
   ※終了タグを持たない属性をvoid要素ともいう
 -->
   <meta charset="utf-8">
-<!-- </head> -->
+
+</head>
 
 <!-- bodyタグ
   Webページの訪問者に直接見える部分
@@ -78,6 +81,11 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
     ・button：汎用的なボタンを作る
     -->
 
+    <!--value属性 
+      入力コントロールの初期値やラベル、オブジェクトに与えるパラメータ、順序付きリストの項目番号を設定するための属性
+      
+     -->
+
    <!-- <form method="POST" action="https://larc-en-ciel.com/index.php">
     <p>お名前：<input type="text" name="NAME"></p>
     <p>メールアドレス：<input type="text" name="email"></p>
@@ -89,46 +97,48 @@ DOCTYPE宣言のあとに開始タグを記述し、文書の最後に終了タ�
     <table>
       <!-- 液晶画面部分 -->
       <tr>
-      <tr>
+      <tr>  
         <td colspan="100">
-          <input type="text" class="display" name="display" value="電卓作成中">
+          <input type="text" class="display" name="display" value="">
         </td>
       </tr> 
 
       <!-- 上から1段目（7~9＋÷） -->
       <tr>
-        <td><input class="buttoncss" type="button" value="7" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="8" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="9" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="÷" onclick="get_calc(this)"></td>
+        
+        <td><input class="buttoncss" type="button" value="7" onclick="sayHello()"></td>
+        <td><input class="buttoncss" type="button" value="8" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="9" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="÷" onclick="getCalc(this)"></td>
       </tr>
 
       <!-- 上から2段目（4~6＋×） -->
       <tr>
-        <td><input class="buttoncss" type="button" value="4" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="5" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="6" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="×" class="operator" onclick="get_calc(this)"></td>
+        <td><input class="buttoncss" type="button" value="4" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="5" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="6" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="×" class="operator" onclick="getCalc(this)"></td>
       </tr>
 
       <!-- 上から3段目（1~3＋-） -->
       <tr>
-        <td><input class="buttoncss" type="button" value="1" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="2" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="3" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="-" class="operator" onclick="get_calc(this)"></td>
+        <td><input class="buttoncss" type="button" value="1" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="2" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="3" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="-" class="operator" onclick="getCalc(this)"></td>
       </tr>
 
       <!-- 上から4段目（0/C/=/+) -->
       <tr>
-        <td><input class="buttoncss" type="button" value="0" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="C" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="=" class="equal" onclick="get_calc(this)"></td>
-        <td><input class="buttoncss" type="button" value="+" class="operator" onclick="get_calc(this)"></td>
+        <td><input class="buttoncss" type="button" value="0" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="C" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="=" class="equal" onclick="getCalc(this)"></td>
+        <td><input class="buttoncss" type="button" value="+" class="operator" onclick="getCalc(this)"></td>
       </tr>
 
     </table>
   </form>
+  <script src="./dentakuScript.js"></script>
 </body>
 
 </html>
